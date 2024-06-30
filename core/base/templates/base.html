@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futurepedia</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #navbarnav{
+            background-color: #d7e9fa;
+        }
+        .bg-light{
+            background-color: #d7e9fa;
+        }
+        .bg-color{
+            background-color: #d7e9fa;
+        }
+    
+        footer.bg-light {
+            background-color: #0d0623 !important;
+            color: #ffffff; /* Optional: Set text color to white */
+            padding-top: 20px; /* Adjust padding if needed */
+            padding-bottom: 20px; /* Adjust padding if needed */
+        }
+        .bg-color2{
+            background-color: #bad8f4;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-light py-3 ">
+        <nav class="container navbar navbar-expand-lg navbar-light bg-color">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                Futurepedia
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">AI Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI Agents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI Innovations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Advertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-color2">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="bg-light py-4 ">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Productivity Tools</a></li>
+                        <li><a href="#">Image Generators</a></li>
+                        <li><a href="#">Text Generators</a></li>
+                        <li><a href="#">Video Tools</a></li>
+                        <li><a href="#">Art Generators</a></li>
+                        <li><a href="#">Audio Generators</a></li>
+                        <li><a href="#">All AI Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Best AI Art Generators</a></li>
+                        <li><a href="#">Best AI Image Generators</a></li>
+                        <li><a href="#">Best AI Chatbots</a></li>
+                        <li><a href="#">Best AI Text Generators</a></li>
+                        <li><a href="#">Best AI 3D Generators</a></li>
+                        <li><a href="#">All Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Submit a Tool</a></li>
+                        <li><a href="#">Request a Feature</a></li>
+                        <li><a href="#">Update a Tool</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">LinkedIn</a></li>
+                    <li class="list-inline-item"><a href="#">Twitter</a></li>
+                    <li class="list-inline-item"><a href="#">YouTube</a></li>
+                    <li class="list-inline-item"><a href="#">TikTok</a></li>
+                    <li class="list-inline-item"><a href="#">Instagram</a></li>
+                    <li class="list-inline-item"><a href="#">Facebook</a></li>
+                </ul>
+                <p>© 2024 Futurepedia LLC. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

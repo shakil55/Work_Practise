@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center my-5">
+    <h1 class="display-4 font-weight-bold">Discover what AI can do for you</h1>
+    <p class="lead">We've helped 5M+ professionals learn to leverage AI by helping them find the best AI tools.</p>
+    <div class="input-group mb-3 justify-content-center">
+        <input type="text" class="form-control" placeholder="Enter a tool name or use case...">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button">Search AI Tools</button>
+        </div>
+    </div>
+    <div class="btn-group mt-3" role="group" aria-label="Categories">
+        <button type="button" class="btn btn-outline-secondary">Marketing</button>
+        <button type="button" class="btn btn-outline-secondary">Productivity</button>
+        <button type="button" class="btn btn-outline-secondary">Design</button>
+        <button type="button" class="btn btn-outline-secondary">Video</button>
+        <button type="button" class="btn btn-outline-secondary">Research</button>
+        <button type="button" class="btn btn-outline-secondary">All Categories</button>
+    </div>
+</div>
+
+<div class="row">
+    {% for tool in tools %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{{ tool.image.url }}" class="card-img-top" alt="{{ tool.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ tool.name }}</h5>
+                    <p class="card-text">{{ tool.description }}</p>
+                    <a href="{{ tool.link }}" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
